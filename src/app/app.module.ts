@@ -1,7 +1,10 @@
 import { AjaModule } from "@aja";
-import { AppRoot, AppTile } from "./app.widget";
+import { AppRoot } from "./app.widget";
+import { SharedModule } from "./shared/shared.module";
 
-export class AppModule extends AjaModule {
-  declarations = [AppRoot, AppTile];
-  bootstrap = AppRoot;
-}
+@AjaModule({
+  declarations: [AppRoot],
+  imports: [SharedModule],
+  bootstrap: [AppRoot]
+})
+export class AppModule {}
