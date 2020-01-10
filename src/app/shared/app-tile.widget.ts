@@ -1,6 +1,5 @@
 import { AjaWidget, AjaInit, EventEmitter } from "@aja";
 
-
 export class AppTile extends AjaWidget implements AjaInit {
 
   show = new EventEmitter<string>();
@@ -10,10 +9,7 @@ export class AppTile extends AjaWidget implements AjaInit {
   }
 
   render() {
-    return `
-      <h3>title</h3>
-      <p (click)="xxx">subtitle</p>
-    `;
+    return require('./app-tile.html');
   }
 
 }

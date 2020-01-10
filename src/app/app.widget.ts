@@ -3,7 +3,7 @@ import { AjaWidget } from "@aja";
 export class AppRoot extends AjaWidget {
   name: string = "Ajanuw";
 
-  changeName(): void {
+  changeName() {
     this.name = "Alone";
   }
 
@@ -13,9 +13,6 @@ export class AppRoot extends AjaWidget {
   }
 
   render() {
-    return `
-      <h1>hello {{ name }}</h1>
-      <app-tile (show)="handle"></app-tile>
-    `;
+    return require("./app-root.html");
   }
 }
