@@ -1,5 +1,5 @@
 import { AjaModule } from "@aja";
-import { AppRoot } from "./app.widget";
+import { AppRoot } from "./app";
 import { SharedModule } from "./shared/shared.module";
 
 @AjaModule({

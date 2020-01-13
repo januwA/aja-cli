@@ -12,7 +12,11 @@ export class AppRoot extends AjaWidget {
     console.log(" i am AppRoot ");
   }
 
+  get hello() {
+    return `Hello ${this.name}`;
+  }
+
   render() {
-    return require("./app-root.html");
+    return require("./app.html");
   }
 }

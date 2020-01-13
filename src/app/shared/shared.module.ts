@@ -1,5 +1,5 @@
 import { AjaModule } from "@aja";
-import { AppTile } from "./app-tile.widget";
+import { AppTile } from "./app-tile/app-tile";
 
 @AjaModule({
   declarations: [AppTile],
