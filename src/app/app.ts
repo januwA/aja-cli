@@ -10,6 +10,7 @@ export class AppRoot extends AjaWidget {
   handle(msg: string) {
     console.log(msg);
     console.log(" i am AppRoot ");
+    
   }
 
   get hello() {

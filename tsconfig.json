@@ -1,12 +1,14 @@
 {
+	"compileOnSave": false,
 	"compilerOptions": {
+		"baseUrl": "./",
 		"outDir": "./dist/",
+		"sourceMap": true,
 		"noImplicitAny": true,
 		"module": "esnext",
 		"moduleResolution": "node",
 		"importHelpers": true,
 		"target": "es2015",
-		"jsx": "react",
 		"allowJs": true,
 		"incremental": true,
 		"strict": true,
@@ -14,10 +16,9 @@
 		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
 		"declaration": false,
+		"downlevelIteration": true,
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
-		"sourceMap": true,
-		"baseUrl": "./",
 		"typeRoots": [
 			"node_modules/@types"
 		],
