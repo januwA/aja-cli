@@ -1,21 +1,11 @@
-import { AjaWidget, EventEmitter, Input, Output, AjaInitState } from "@aja";
+import { AjaWidget, EventEmitter, Input, Output } from "@aja";
 
-export class AppTile extends AjaWidget implements AjaInitState {
-  @Input() name: any;
+export class AppTile extends AjaWidget {
+  @Input() name = "";
+  @Output() nameChange = new EventEmitter<string>();
 
-  @Output()
-  show = new EventEmitter<string>();
-
-  eee() {
-    this.show.emit("wwwww");
-  }
-
-  initState() {
-    // console.log(this.name);
-  }
-
-  changeA() {
-    this.name = "new xxx";
+  change(nv: string) {
+    this.nameChange.emit(nv);
   }
 
   render() {
