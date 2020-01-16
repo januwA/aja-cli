@@ -1,10 +1,10 @@
 import { AjaModule } from "@aja";
-import { AppRoot } from "./app";
+import { AppRoottt } from "./app";
 import { SharedModule } from "./shared/shared.module";
 
 @AjaModule({
-  declarations: [AppRoot],
+  declarations: [AppRoottt],
   imports: [SharedModule],
-  bootstrap: [AppRoot]
+  bootstrap: [AppRoottt]
 })
 export class AppModule {}

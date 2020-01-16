@@ -1,14 +1,14 @@
-import { AjaWidget, EventEmitter, Input, Output } from "@aja";
+import { EventEmitter, Input, Output, Widget } from "@aja";
 
-export class AppTile extends AjaWidget {
+@Widget({
+  selector: "app-tile",
+  template: require("./app-tile.html"),
+})
+export class AppTile {
   @Input() name = "";
   @Output() nameChange = new EventEmitter<string>();
 
   change(nv: string) {
     this.nameChange.emit(nv);
-  }
-
-  render() {
-    return require("./app-tile.html");
   }
 }

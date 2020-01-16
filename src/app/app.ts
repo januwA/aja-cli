@@ -1,9 +1,14 @@
-import { AjaWidget } from "@aja";
+import { Widget, Input } from "@aja";
 
-export class AppRoot extends AjaWidget {
+@Widget({
+  selector: "app-root",
+  template: require("./app.html")
+})
+export class AppRoottt {
+  @Input()
   name: string = "Ajanuw";
 
-  render() {
-    return require("./app.html");
+  show() {
+    this.name = "xxx";
   }
 }

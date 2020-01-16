@@ -85,7 +85,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/,path.resolve(__dirname, 'src', "index.html")],
         use: { loader: "html-loader" }
       }
     ]
@@ -116,12 +116,12 @@ module.exports = {
   ],
   output: {
     filename: "[name]-[hash].js",
-    path: path.resolve(__dirname, tsConfig.compilerOptions.outDir)
+    path: path.resolve(__dirname, tsConfig.compilerOptions.outDir),
 
     // 如果发布第三方包，可以启动下面这三个配置
     // library: "packageName",
-    // libraryTarget: 'umd',
-    // globalObject: "this",
+    libraryTarget: 'umd',
+    globalObject: "this",
 
     // <img src="./x.png" />
     // publicPath: './',
