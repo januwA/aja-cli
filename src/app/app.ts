@@ -1,14 +1,9 @@
-import { Widget, Input } from "@aja";
+import { Widget, Input, Output, EventEmitter } from "@aja";
 
 @Widget({
   selector: "app-root",
   template: require("./app.html")
 })
 export class AppRoottt {
-  @Input()
-  name: string = "Ajanuw";
-
-  show() {
-    this.name = "xxx";
-  }
+  name = "Ajanuw";
 }
