@@ -6,4 +6,5 @@ import { Widget, Input, Output, EventEmitter } from "@aja";
 })
 export class AppRoottt {
   name = "Ajanuw";
+  obj = { name: "ajanuw" };
 }

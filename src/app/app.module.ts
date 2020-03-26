@@ -5,15 +5,18 @@ import { SharedModule } from "./shared/shared.module";
 @Pipe({
   name: "hello"
 })
-class HelloPipe implements PipeTransform {
-  transform(value: any) {
+export class HelloPipe implements PipeTransform {
+  name = "ajanuw";
+  constructor() {
+    console.log(1);
+  }
+  transform(value: any, a: any, b: any) {
     return `hello ${value}`;
   }
-
 }
 
 @AjaModule({
-  declarations: [AppRoottt, HelloPipe],
+  declarations: [AppRoottt],
   imports: [SharedModule],
   bootstrap: [AppRoottt]
 })

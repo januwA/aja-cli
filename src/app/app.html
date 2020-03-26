@@ -1,2 +1,5 @@
-<h1>{{ name | json }}</h1>
+<h1>{{ name | hello:1:2 }}</h1>
+<h1>{{ name | hello:'x':'y' }}</h1>
+<h1>{{ name | hello }}</h1>
+<h1>{{ obj | json }}</h1>
 <button (click)="show">show</button>
