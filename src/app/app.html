@@ -1,7 +1,5 @@
-<p>{{ hello.n | hello }}</p>
-<h1>{{ obj | json }}</h1>
-<button (click)="show">show</button>
 
-<app-tile></app-tile>
+<!-- hello -->
+<p [style]="styles">hello world {{ n }}</p>
 
-<app-tile></app-tile>
+<button (click)="add()">add</button>

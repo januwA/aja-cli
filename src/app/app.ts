@@ -1,35 +1,31 @@
-import { Widget, Input, Output, EventEmitter, Injectable, Pipe, PipeTransform } from "@aja";
-
-@Injectable()
-export class HelloService {
-  n = 1;
-  change() {
-    this.n += 1;
-  }
-}
-
-@Pipe({
-  name: "hello"
-})
-export class HelloPipe implements PipeTransform {
-  name = "ajanuw";
-  constructor(private readonly hello: HelloService) {
-  }
-  transform(value: any, a: any, b: any) {
-    return `hello ${value}`;
-  }
-}
+import {
+  Widget,
+  Input,
+  Directive,
+  ElementRef,
+  Injectable,
+  AjaInitState,
+} from "@aja";
 
 @Widget({
   selector: "app-root",
-  template: require("./app.html")
+  template: require("./app.html"),
 })
-export class AppRoottt {
-  constructor(public readonly hello: HelloService) {}
-  name = "Ajanuw";
-  obj = { name: "ajanuw" };
-
-  show() {
-    this.hello.change();
+export class AppRoottt implements AjaInitState {
+  constructor() {
+    setTimeout(() => {}, 2000);
   }
+  initState(): void {
+    setInterval(() => {
+      this.n++;
+    }, 1000);
+  }
+
+  styles = {
+    color: "red",
+    fontSize: "22px",
+    oxxx: "xx",
+  };
+
+  n = 0;
 }
